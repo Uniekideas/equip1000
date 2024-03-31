@@ -10,6 +10,7 @@ body {
     position: relative;
   }
 
+
 .content .microsoft-office-suite-header {
     background: #ffffff;
     position: relative;
@@ -547,8 +548,9 @@ body {
     .mobile-course-content {
         display: block;
         width: 100%;
-        overflow: visible;
-        margin: 70px 0 0 0;
+        overflow-y: visible;
+        margin: 70px auto 0 auto;
+        overflow-x: hidden;
     }
 
     .content .main-screen {
@@ -656,7 +658,7 @@ body {
 
     .listed-courses .course-image {
         display: block;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         margin-top: -40px;
     }
@@ -668,7 +670,244 @@ body {
     }
 
     .listed-courses a {
+        width: 80%;
+        font-size: 20px;
+        /* height: 25px; */
+        margin-top: -18px;
+    }
+
+    .quiz-link {
+        width: 75%;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .course-video-intro {
+        display: block;
+        width: 95%; 
+        margin: 0 auto;
+        /* margin-left: 15px; */
+      }
+    
+      .course-video-intro iframe {
+        border-radius: 16px;
+        display: block;
+        width: 100%;
+        height: 315px;
+      }
+
+      .course-video-intro .mark-as-complete {
+        background: #275c6f;
+        border-radius: 8px;
+        padding: 5px 10px 5px 10px;
+        width: 170px;
+        height: 26px;
+        color:#ffffff;
+        font-family: "Roboto-SemiBold", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        position: relative;
+        margin-left: 120px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+
+      .course-document {
+        background: #e7e5e5;
+        border-radius: 16px;
+        display: block;
+        height: 301px;
+        width: 95%;
+        position: relative;
+        overflow: hidden;
+        margin: 30px auto 0 auto;
+      }
+
+      .course-document .page img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 100%;
+      }
+
+      .page .page-tracker {
+        height: 40px;
+        padding: 0px 8px 14px 8px;
+      }
+
+      .page-tracker p {
+        font-size: 17px;
+      }
+
+      .save-pdf {
+        width: 75%;
+      }
+    
+
+    /* mobile style for right side contents */
+    .right-content {
+        display: block;
         width: 90%;
+        margin: 680px auto 20px auto;
+        position: initial;
+    }
+    .right-content .calendar-widget {
+        display: none;
+    }
+
+    .right-content .course-translate-btn {
+        display: none;
+    }
+
+    .right-content .translate-button {
+      display: none;
+    }
+
+    .right-content .course-read-btn {
+        display: none;
+    }
+
+    .right-content .course-list {
+        display: block;
+        width: 90%;
+        margin: 40px auto 0 auto;
+        position: initial;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* mobile style for middle contents */
+    .mobile-course-content {
+        display: block;
+        width: 100%;
+        overflow-y: visible;
+        margin: 70px auto 0 auto;
+        overflow-x: hidden;
+        position: inherit;
+    }
+
+    .content .main-screen {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .main-screen .microsoft-container {
+        display: block;
+        width: 100%;
+        height: fit-content;
+        margin: auto;
+        position: initial;
+        margin-bottom: 150px;
+    }
+
+    .microsoft-office-suite-header p {
+        font-size: 28px;
+        width: 100%;
+    }
+    .microsoft-office-suite-description {
+        display: block;
+        width: 95%;
+    }
+
+    .microsoft-office-suite-description p {
+        width: 95%;
+    }
+
+    .microsoft-office-suite-description .one {
+        display: block;
+        font-size: 19px;
+        margin-top: 50px;
+    }
+
+    .microsoft-office-suite-description .two {
+        display: block;
+        font-size: 19px;
+        margin-top: 5px;
+    }
+    .microsoft-office-suite-description .three {
+        display: block;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .microsoft-container .microsoft-office-suite-image {
+        display: block;
+        width: 95%;
+        height: 190px;
+        margin: 0 auto;
+        position: initial;
+        padding: 0;
+    }
+
+    .microsoft-office-suite-image img {
+        background: linear-gradient(180deg,rgba(0, 0, 0, 0.1) 0%,rgba(0, 0, 0, 0) 100%);
+        display: block;
+        width: 95%;
+        height: 180px;
+        padding: 20px;
+        margin: 0 auto;
+        object-fit: initial;
+    }
+
+    .microsoft-container .course-description {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .course-description .desc {
+        font-size: 16px;
+    }
+
+    .course-description .course-duration {
+        display: block;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-left: -33px;
+    }
+
+    .microsoft-container .course-status {
+        margin-top: -50px;
+    }
+
+    .course-status .status-color {
+        height: 23px;
+    }
+
+    .course-status p {
+        font-size: 17px;
+    }
+
+
+    .listed-courses .course-header {
+        font-size: 28px;
+    }
+
+    .listed-courses .course-short-description {
+        display: block;
+        font-size: 16px;
+        margin-top: -50px;
+    }
+
+    .listed-courses .course-image {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: -40px;
+    }
+
+    .course-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: initial;
+    }
+
+    .listed-courses a {
+        width: 80%;
         font-size: 20px;
         /* height: 25px; */
         margin-top: -18px;

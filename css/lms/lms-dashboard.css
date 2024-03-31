@@ -271,9 +271,9 @@ body {
   display: none;
 }
 
-.content .main-screen {
+/* .main-content .main-screen {
   width: 67%;
-}
+} */
 
 .content .dashboard-header {
   padding: 8px 16px 0px 16px;
