@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../css/eqip/register.css">
+    <link rel="stylesheet" href="../css/eqip/mobile-bottom-nav.css">
+    <link rel="stylesheet" href="../css/eqip/reserve/laptop-confirmation.css">
+    <link rel="stylesheet" href="../css/eqip/reserve/dash-header.css">
+    <link rel="stylesheet" href="../css/eqip/reserve/laptop-checkout.css">
+    <link rel="stylesheet" href="../css/eqip/mobile-bottom-nav.css">
+    <link rel="stylesheet" href="../css/eqip/checkout-pop-up.css">
+    <link rel="stylesheet" href="../css/eqip/lms-landing.css"> -->
+    <link rel="stylesheet" href="../css/eqip/reserve/laptop-confirmation.css">
+    <link rel="stylesheet" href="../css/eqip/reserve/dash-header.css">
+    <link rel="stylesheet" href="../css/eqip/reserve/laptop-checkout.css">
+    <link rel="stylesheet" href="../css/eqip/mobile-bottom-nav.css">
+    <link rel="stylesheet" href="../css/eqip/checkout-pop-up.css">
+
+    
+</head>
+<body>
+    <div class="sticky">
+        <div class="small-screen-navbar" style="background-color: #275c6f;">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <a class="logo" href="../index.html"><img src="../img/logo/Equip1000 logo.svg" /></a>                 
+            <ul class="nav-list" id="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lms.html">LMS</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="mobile-cta" style="display: none;"><a href="register.html">Sign Up</a></li>
+                <li class="mobile-cta" style="display: none;"><a href="home-login.html">Log In</a></li>
+            </ul>
+            <div class="top-right">
+                <div class="notification">
+                    <img src="../img/svg/notifications.svg" alt="">
+                    <div class="line"></div>
+                </div>
+                <div class="profile">
+                    <a href="dashboard.html"><img src="../img/image-icon.png" alt=""></a>
+                </div>
+                <div class="name">
+                    <a href="dashboard.html"><p>PRINCE</p></a>
+                </div>
+                <div class="id">
+                  <a href="dashboard.html"><p>2023/Q4/7223</p></a>
+              </div>
+                <div class="dropdown" onclick="toggleDropdown()">
+                    <a href="javascript:void(0)"><i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                      <a href="settings.html"><i class="fa-solid fa-circle-user"></i> Profile</a>
+                      <a href="settings.html"><i class="fa-solid fa-lock"></i> Security</a>
+                      <a href="settings.html"><i class="fa-solid fa-list-check"></i> Preferences</a>
+                      <a href="#" onclick="confirmLogout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="product-left">
+            <div class="product-image">
+                <img src="../img/dell-xps-13-screen-lid1 1.png" alt="">
+            </div>
+            <p>Dell XPS Laptop </p>
+            <div class="specification">
+                <p class="title">Device Specs</p>
+                <p class="sub-title">Dell XPS 13 laptop is a windows 10 laptop with a 13.30inch display that has a resolution of 3200 by 1800pixels. It is powered by a Corei5 processor and it comes with a 8gb of RAM. The Dell XPS 13 packs 128GB of SSD storage. Graphics are powered by Intel Integrated HD graphics 520.</p>
+            </div>
+            <p class="price-label">Price</p>
+            <p class="price">₦300,000</p>
+        </div>
+        
+        <div class="product-details">
+            <p class="title">Cash payment on Delivery</p>
+            <p class="sub-title">Please select pickup method</p>
+            <div class="location-details">
+                <img src="../img/svg/map-icon.svg" alt="">
+                <input type="text" id="location" placeholder="Please enter your location here or use the map selector">
+                <img class="map-pop-up" id="login" src="../img/svg/pin_drop.svg" alt="">
+            </div>
+            <div class="delivery-details">
+                <div class="top-details">
+                    <img src="../img/svg/delivery-bus.svg" alt="">
+                    <p>Door delivery</p>
+                </div>
+                <div class="middle-details">
+                    <p class="delivery-fee-title">Delivery fee</p>
+                    <p class="delivery-amount">N 5,000</p>
+                </div>
+                <div class="bottom-details">
+                    <p>Ready for delivery between 05 of march and 12 of march when you order in the next 24 hours</p>
+                </div>
+            </div>
+            <div class="delivery-details">
+                <div class="top-details">
+                    <img src="../img/svg/pick-up.svg" alt="">
+                    <p>Pickup Station</p>
+                </div>
+                <div class="middle-details">
+                    <p class="delivery-fee-title">Pickup fee</p>
+                    <p class="delivery-amount">N 2,000</p>
+                </div>
+                <div class="bottom-details">
+                    <p>Arriving for pickup between 05 of match and 10 of march when you order in the next 24 hours.</p>
+                </div>
+            </div>
+            <div class="choose-payment-method">
+                <div class="component">
+                    <select name="" id="" required>
+                        <option value="Choose-payment-method">Choose payment method</option>
+                        <option value="cash-payment">Cash payment on delivery</option>
+                        <option value="digital-payment">Digital payment</option>
+                    </select>
+                </div>
+            </div>
+            
+            <a href="card-details.html" class="confirm-btn">
+                <p class="confirm-order">CONFIRM ORDER</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Start of the checkout pop up -->
+    <div class="login-popup" style="background-color: transparent;">
+        <!-- <form action=""> -->
+            <div onclick="showConfirmation()" class="order-confirmation" style="width: 100%; margin-top: -10px; border-radius: 0;">
+                <!-- <div class="cancel-btn"></div> -->
+                <img class="map" src="../img/svg/Basemap image.svg" alt="">
+                <div id="map"></div>
+                <img id="" class="cancel-btn close-icon" style="border: none; position: absolute;top: 0; right: 0;" src="../img/svg/Ex.svg" alt="">
+            </div>
+        <!-- </form> -->
+    </div>
+    <!-- End of Checkout popup -->
+
+     <!-- Section for the mobile bottom nav -->
+   <div class="mobile-bottom-nav-bar">
+    <a href="laptop-checkout.html" class="bar-box">
+      <img src="../img/svg/arrow_back.svg" alt="">
+      <div class="nav-text">Back</div>
+    </a>
+    <a href="card-details.html" class="bar-box">
+      <img src="../img/svg/arrow_forward.svg" alt="">
+      <div class="nav-text">Next</div>
+    </a>
+    <a href="" class="bar-box">
+      <img src="../img/svg/speaker_phone-mobile.svg" alt="">
+      <div class="nav-text">Read</div>
+    </a>
+    <a href="" class="bar-box">
+      <img src="../img/svg/g_translate-mobile.svg" alt="">
+      <div class="nav-text">Translate</div>
+    </a>
+   </div>
+       
+
+    <script src="../js/header.js"></script>
+    <script src="../js/menu-drop-down.js"></script>
+    <script src="../js/checkout-pop-up.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    'user strict';
+    
+    (function () {
+        var login = {
+          init: function () {
+            this.cacheDom();
+            this.addEvents();
+          },
+          cacheDom: function () {
+            this.$loginBtn    = $('#login');
+            this.$loginPopup  = $('.login-popup');
+            this.$closePopup  = $('.close-icon');
+          },
+          addEvents: function () {
+            this.$loginBtn.on('click', this.showLogin.bind(this));
+            this.$closePopup.on('click', this.hideLogin.bind(this));
+          },
+          showLogin: function (e) {
+            e.preventDefault();
+            this.$loginPopup.fadeIn('fast');
+          },
+          hideLogin: function () {
+            this.$loginPopup.fadeOut('fast');
+          }
+        }
+        login.init();
+  
+    })();
+  });
+    </script>
+    <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65b535410ff6374032c5932c/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+<!-- Load the Google Maps JavaScript API -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgYc6tDV-sI4hCBc1WBlOqi9G1HGkMSiA&callback=initMap">
+</script>
+</body>
+</html>

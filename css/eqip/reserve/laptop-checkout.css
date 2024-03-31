@@ -1,0 +1,1136 @@
+/* Style for order checkout */
+body {
+    margin: 0;
+    font-family: "Roboto-Bold",sans-serif;
+}
+
+.product-details .price-summary {
+    background: #f6fafe;
+    padding: 16px;
+    display: flex;
+    width: 90%;
+    max-width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.price-summary .title {
+    color: #020202;
+    text-align: right;
+    font-family: "Roboto-Bold",sans-serif;
+    font-size: 19px;
+    line-height: 140%;
+    font-weight: 700;
+    position: relative;
+}
+
+.price-summary .summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.summary-items .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+}
+
+.row .row-item {
+    color: #000000;
+    text-align: right;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+.row .row-price {
+    color:#495057;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.summary-items .summary-line {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0.5px 0 0 0;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 0px;
+    position: relative;
+}
+
+.row .summary-total-price {
+    color: #20a612;
+}
+
+.product-details .choose-payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 46px;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 0 0;
+}
+
+.choose-payment-method .component {
+    background: #fff5cc;
+    position: relative;
+}
+
+.component select {
+    width: 530px;
+    outline: none;
+    border: none;
+    background: #fff5cc;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.product-details .confirm-btn {
+    background: #275c6f;
+    border-radius: 8px;
+    /* padding: 16px 8px 16px 8px; */
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 308px;
+    position: relative;
+    text-decoration: none;
+    margin-top: 60px;
+    margin-left: 210px;
+}
+
+.confirm-btn .confirm-order {
+    color:#ffffff;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Style for cash on delivery */
+.product-details .location-details {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #ced4da;
+    border-width: 1px;
+    padding: 16px 8px 16px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 93%;
+}
+
+.location-details input[type=text] {
+    width: 90%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+#location::placeholder {
+    color:#ced4da;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+.location-details .map-pop-up {
+    cursor: pointer;
+}
+
+.product-details .delivery-details {
+    background: #f6fafe;
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.delivery-details .top-details {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+}
+
+.delivery-details .middle-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+}
+
+.middle-details .delivery-fee-title {
+    color: #000000;
+    text-align: right;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+.middle-details .delivery-amount {
+    color: #495057;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.delivery-details .bottom-details {
+    color: #495057;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 11px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+    margin-top: 10px;
+}
+
+.order-confirmation .map {
+    width: 105.31%;
+    height: 138.11%;
+    /* height: 98%; */
+    position: absolute;
+    right: -2.66%;
+    left: -2.66%;
+    bottom: -18.99%;
+    top: -19.13%;
+    object-fit: cover;
+}
+
+.order-confirmation .cancel-btn {
+    background:#ffffff;
+    border-radius: 8px 0px 8px 0px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+
+/* style for card details */
+.product-details .top-card-details {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 90%;
+}
+
+.top-card-details .logo {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-card-details .top-right-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.top-right-details .amount {
+    color:#20a612;
+    text-align: left;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-right-details .email {
+    color:#495057;
+    text-align: right;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+.product-details .bank-card-box {
+    background: #f6fafe;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 90%;
+}
+
+.bank-card-box .card-info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 237.94px;
+    position: relative;
+    width: 100%;
+}
+
+.card-info p {
+    color: #000000;
+    text-align: right;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 19px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    margin-top: 0px;
+}
+
+.bank-card-box .bank-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.bank-card-details .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    margin-top: -10px;
+}
+
+.card .card-number {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative; 
+    margin-top: 0;
+}
+
+.card-number p {
+    color: #ced4da;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+.card .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    width: 10px;
+}
+
+.row input[type=text] {
+    border: none;
+    outline: none;
+    width: 60px;
+    background-color: transparent;
+}
+
+.bank-card-box .line {
+    border-style: solid;
+    border-color: rgba(2, 2, 2, 0.5);
+    border-width: 0.5px 0 0 0;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(0deg) scale(1, 1);
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#validMonth::placeholder {
+    padding-left: 10px;
+}
+
+form .remember {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: 0;
+}
+
+.remember input[type=radio] {
+    width: 24px;
+  height: 24px;
+  margin-left: 0;
+}
+
+.remember p {
+    color: #666666;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-box-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 95%;
+}
+
+form .agreement {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 0px;
+}
+
+.agreement input[type=radio] {
+    width: 24px;
+    height: 24px;
+    margin-left: 0;
+}
+
+.agreement p {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 11px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+}
+
+.agreement a {
+    text-decoration: none;
+    color: #ff2828;
+}
+
+.order-confirmation .confirm {
+    width: 150px; 
+    height: 150px;
+    margin-top: 20px;
+    animation: rotateImage 2s linear infinite;
+}
+
+.escrow-system-security {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .escrow-system-security .lock {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lock img {
+    width: 66.67%;
+    height: 87.5%;
+    position: absolute;
+    right: 16.67%;
+    left: 16.67%;
+    bottom: 8.33%;
+    top: 4.17%;
+    overflow: visible;
+  }
+
+  .escrow-system-security p {
+    color: #20a612;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 11px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+  }
+
+@keyframes rotateImage {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+@media only screen and (max-width: 767px) {
+    .content .product-details {
+        padding: 8px 0px 8px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        margin-top: -30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 97%;
+    }
+
+    .product-details .price-summary {
+        background: #f6fafe;
+        padding: 16px;
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .price-summary .title {
+        color: #020202;
+        text-align: left;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 19px;
+        line-height: 140%;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .price-summary .summary-items {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        margin-top: -40px;
+    }
+
+    .summary-items .row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-self: stretch;
+        flex-shrink: 0;
+        height: 20px;
+        position: relative;
+    }
+
+    .row .row-item {
+        color: #000000;
+        text-align: left;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .row .row-price {
+        color:#495057;
+        text-align: right;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .summary-items .summary-line {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 0.5px 0 0 0;
+        align-self: stretch;
+        flex-shrink: 0;
+        height: 0px;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .row .summary-total-price {
+        color: #20a612;
+    }
+
+    
+    .product-details .choose-payment-method {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 46px;
+        width: 93%;
+        position: relative;
+        overflow: hidden;
+        margin: 30px 0 0 0;
+    }
+    
+    .choose-payment-method .component {
+        background: #fff5cc;
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .component select {
+        width: 100%;
+        outline: none;
+        border: none;
+        background: #fff5cc;
+        border-radius: 8px;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+    
+    .product-details .confirm-btn {
+        background: transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        position: relative;
+        text-decoration: none;
+        margin-top: 40px;
+        margin-left: 0px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+
+    }
+    
+    .confirm-btn .confirm-order {
+        color: #275c6f;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-details .location-details {
+        border-radius: 8px;
+        border-style: solid;
+        border-color: #ced4da;
+        border-width: 1px;
+        padding: 16px 8px 16px 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 90%;
+    }
+
+    #location::placeholder {
+        font-size: 13px;
+    }
+
+    .product-details .delivery-details {
+        background: #f6fafe;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 85%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .delivery-details .middle-details {
+        margin-top: -25px;
+    }
+
+    /* Mobile Style for Card details */
+    .top-card-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .top-card-details .logo {
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+        flex-shrink: 0;
+        width: 60.08px;
+        height: 55px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .top-card-details .top-right-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .top-card-details .amount {
+        display: block;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .card-box-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .card-confirm-btn {
+        background: transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        position: relative;
+        text-decoration: none;
+        margin-top: 40px;
+        margin-left: 0px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+
+    }
+    
+    .confirm-btn .confirm-order {
+        color: #275c6f;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .content .product-details {
+        padding: 8px 0px 8px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        margin-top: -30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 97%;
+    }
+
+    .product-details .price-summary {
+        background: #f6fafe;
+        padding: 16px;
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .price-summary .title {
+        color: #020202;
+        text-align: left;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 19px;
+        line-height: 140%;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .price-summary .summary-items {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        margin-top: -40px;
+    }
+
+    .summary-items .row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-self: stretch;
+        flex-shrink: 0;
+        height: 20px;
+        position: relative;
+    }
+
+    .row .row-item {
+        color: #000000;
+        text-align: left;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .row .row-price {
+        color:#495057;
+        text-align: right;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .summary-items .summary-line {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 0.5px 0 0 0;
+        align-self: stretch;
+        flex-shrink: 0;
+        height: 0px;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .row .summary-total-price {
+        color: #20a612;
+    }
+
+    
+    .product-details .choose-payment-method {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 46px;
+        width: 93%;
+        position: relative;
+        overflow: hidden;
+        margin: 30px 0 0 0;
+    }
+    
+    .choose-payment-method .component {
+        background: #fff5cc;
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .component select {
+        width: 100%;
+        outline: none;
+        border: none;
+        background: #fff5cc;
+        border-radius: 8px;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+    
+    .product-details .confirm-btn {
+        background: transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        position: relative;
+        text-decoration: none;
+        margin-top: 40px;
+        margin-left: 0px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+
+    }
+    
+    .confirm-btn .confirm-order {
+        color: #275c6f;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-details .location-details {
+        border-radius: 8px;
+        border-style: solid;
+        border-color: #ced4da;
+        border-width: 1px;
+        padding: 16px 8px 16px 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 90%;
+    }
+
+    #location::placeholder {
+        font-size: 13px;
+    }
+
+    .product-details .delivery-details {
+        background: #f6fafe;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 85%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .delivery-details .middle-details {
+        margin-top: -25px;
+    }
+
+    /* Mobile Style for Card details */
+    .top-card-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .top-card-details .logo {
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+        flex-shrink: 0;
+        width: 60.08px;
+        height: 55px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .top-card-details .top-right-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .top-card-details .amount {
+        display: block;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .card-box-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .card-confirm-btn {
+        background: transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        position: relative;
+        text-decoration: none;
+        margin-top: 40px;
+        margin-left: 0px;
+        border-style: solid;
+        border-color: #275c6f;
+        border-width: 1px;
+
+    }
+    
+    .confirm-btn .confirm-order {
+        color: #275c6f;
+        font-family: "Roboto-Bold",sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

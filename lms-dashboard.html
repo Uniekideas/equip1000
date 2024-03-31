@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/lms/header.css"> -->
+    <link rel="stylesheet" href="css/lms/dashboard-header.css">
+    <link rel="stylesheet" href="css/lms/dash-side-bar.css">
+    <link rel="stylesheet" href="css/lms/dash-content.css">
+    <link rel="stylesheet" href="css/eqip/mobile-bottom-nav.css">
+</head>
+<body>
+    <div class="sticky">
+      <div class="small-screen-navbar">
+          <a class="logo" href="lms.html"><img src="img/logo/Equip1000 logo.svg" /></a>
+          <div class="top-right">
+              <div class="notification">
+                  <i class="fa-regular fa-bell"></i>
+                  <div class="line"></div>
+              </div>
+              <div class="profile">
+                  <a href="lms-dashboard.html"><img src="img/image-icon.png" alt=""></a>
+              </div>
+              <div class="name">
+                  <a href="lms-dashboard.html"><p>PRINCE</p></a>
+              </div>
+              <div class="id">
+                <a href="javascript:void(0)"><p>2023/Q4/7223</p></a>
+            </div>
+              <div class="dropdown" onclick="toggleDropdown()">
+                  <a href="javascript:void(0)"><i class="fa-solid fa-caret-down"></i></a>
+                  <div class="dropdown-content" id="myDropdown">
+                      <a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                      <a href="settings.html"><i class="fa-solid fa-circle-user"></i> Profile</a>
+                      <a href="settings.html"><i class="fa-solid fa-lock"></i> Security</a>
+                      <a href="settings.html"><i class="fa-solid fa-list-check"></i> Preferences</a>
+                      <a href="#" onclick="confirmLogout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                  </div>
+              </div>            
+          </div>
+      </div>
+  </div>
+
+    <!-- Start of the Left side bar -->
+    <!-- Mobile menu toggle button -->
+    <div id="mobile-menu-toggle">&#9776;</div>
+    <div class="sidebar-active" id="sidebar-active">
+        <a class="side-link active" href="lms-dashboard.html">
+            <img src="img/svg/Dashboard Icon.svg" alt="Dashboard Icon">
+            <p>Dashboard</p>
+        </a>
+        <a class="side-link" href="lms-courses.html">
+          <img src="img/svg/Courses Icon.svg" alt="Couse Icon">
+          <p>Courses</p>
+        </a>
+        <a class="side-link" href="assessment/assessment-instructions.html">
+          <img src="img/svg/Assessment Icon.svg" alt="Assessment Icon">
+          <p>Assessment</p>
+        </a>
+        <a class="side-link" href="certificates/certificates.html">
+          <img src="img/svg/certificate.svg" alt="Certificate Icon">
+          <p>Certificates</p>
+        </a>
+        <a class="side-link" href="messaging/mesaging.html">
+          <img src="img/svg/Messaging Icon.svg" alt="Message Icon">
+          <p>Messaging</p>
+        </a>
+        <a class="side-link" href="instructors/instructors.html">
+          <img src="img/svg/Instructors Icon.svg" alt="Instructors Icon">
+          <p>Instructors</p>
+        </a>
+        <a class="side-link community" href="" style="pointer-events: none;">
+          <img src="img/svg/community-icon.svg" alt="Community Icon">
+          <p>Community</p>
+        </a>
+        <a class="side-link" href="settings/settings.html">
+          <img src="img/svg/Settings Icon.svg" alt="Settings Icon">
+          <p>Settings</p>
+        </a>
+        <a class="side-link logout" href="#" onclick="confirmLogout()">
+          <img src="img/svg/Logout Icon.svg" alt="Logout Icon">
+          <p>Logout</p>
+        </a>
+    </div>
+    <!-- Start of the Left side bar -->
+
+    <!-- Start of Right Side Content -->
+    <div class="content">
+      <div class="main-screen">
+        <div class="dashboard-header">
+          <p class="welcome-text">Welcome, <span id="firstName"></span>Prince!</p>
+          <p class="welcome-sub-text"> It is time to continue learning. Take a step closer to Mastery!</p>
+          <p class="mobile-welcome-sub-text">Take a step closer to Mastery!</p>
+        </div>
+        <div class="in-progress-classes">
+          <div class="progress-box">
+            <a href="courses/microsoft-office-tools.html" class="box">
+              <p>Microsoft Suite</p>
+              <img src="img/ms suite img.png" alt="ms suite">
+            </a>
+          </div>
+          <div class="progress-box">
+            <a href="courses/google-suite-tools.html" class="box">
+              <p>Google Suite</p>
+              <img src="img/Google Suite img.png" alt="G suite">
+            </a>
+          </div>
+          <div class="progress-box">
+            <a href="courses/canva-for-educators.html" class="box">
+              <p>Canva for Educators</p>
+              <img src="img/canva img.png" alt="Canva">
+            </a>
+          </div>
+          <div class="progress-box">
+            <a href="courses/kahoot-for-educators.html" class="box">
+              <p>Kahoot for Educators</p>
+              <img src="img/Kahoot img.png" alt="ms suite">
+            </a>
+          </div>
+        </div>
+
+        <!-- Announcement Section for large screen -->
+        <div class="announcement-section">
+          <div class="announcement-header">
+            <p>Announcements</p>
+          </div>
+          <div class="announcements-container" id="announcementsContainer">
+            <div class="announcements-group">
+              <p class="label">Important!!</p>
+              <div class="text">
+                <li>Your registration expires in 3 weeks, do well to complete your courses and claim your certificate.</li>
+              </div>
+            </div>
+            <div class="announcements-group">
+              <p style="color: #20a612;" class="label">Notice</p>
+              <div class="text">
+                <li>You are 40 minutes away from your first certification. Keep going!</li>
+              </div>
+            </div>
+            <div class="announcements-group">
+              <p style="color: #e6900f;" class="label">Notice</p>
+              <div class="text">
+                <li>Don't miss our mandatory Orientation Program taking place on [Date] at [Time] in [Location]. This program will provide you with an overview of any subject of your choice.</li>
+              </div>
+            </div>
+          </div>
+          <div class="announcement-btn-wrapper">
+            <a href="javascript:void(0)" onclick="expandToFillScreen()">Expand to fill screen</a>
+          </div> 
+        </div>
+        <!-- End of announcement section for large screen -->
+
+        <!-- Announcement Section for small screen -->
+        <div class="mobile-announcement-container" id="mobileAnnouncement">
+          <div class="mobile-announcement-header">
+            <div class="title">Announcements</div>
+            <div class="sub-title">
+              Tap here to view announcements <img class="rotate" src="img/svg/arrow_drop_down.svg" alt="">
+            </div>
+          </div>
+          <div class="mobile-announcements-box">
+            <div class="notice-box">
+              <div class="label">
+                <div class="important">Important!!</div>
+              </div>
+              <div class="input-field">
+                <div class="text-box">
+                  <div class="text-box-2">
+                    Your registration expires in 3 weeks, do well to complete your
+                    courses and claim your certificate.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notice-box">
+              <div class="label">
+                <div class="notice">Notice</div>
+              </div>
+              <div class="input-field2">
+                <div class="text-box">
+                  <div class="text-box-2">
+                    You are 40 minutes away from your first certification. Keep going!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notice-box">
+              <div class="label">
+                <div class="notice2">Notice</div>
+              </div>
+              <div class="input-field3">
+                <div class="text-box">
+                  <div class="text-box-2">
+                    Don&#039;t miss our mandatory Orientation Program taking place on
+                    [Date] at [Time] in [Location]. This program will provide you with
+                    an overview of any subject of your choice.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Announcement Section for small screen -->
+
+        <!-- Start of completed courses -->
+        <div class="completed-courses">
+          <div class="completed-courses-header">
+            <p>Completed Courses</p>
+          </div>
+          <div class="completed-courses-container">
+            <a href="courses/microsoft-innovative-programme.html" class="box">
+              <p>Microsoft Innovative Prog...</p>
+              <div class="stats">
+                <img src="img/full stats.png" alt="100%">
+              </div>
+            </a>
+            <a href="courses/social-media-tools.html" class="box">
+              <p>Social Media Tools...</p>
+              <div class="stats">
+                <img src="img/full stats.png" alt="100%">
+              </div>
+            </a>
+            <a href="courses/ai-tools.html" class="box">
+              <p>AI Tools for Educators</p>
+              <div class="stats">
+                <img src="img/full stats.png" alt="100%">
+              </div>
+            </a>
+            <a href="courses/virtual-learning-platform.html" class="box">
+              <p>Virtual Learning tools...</p>
+              <div class="stats">
+                <img src="img/full stats.png" alt="100%">
+              </div>
+            </a>
+          </div>
+          <div class="courses-btn-wrapper">
+            <a href="">View more</a>
+          </div>
+        </div>
+        <!-- End of completed courses section -->
+
+        <!-- Start of the note section for large screen -->
+        <div class="notes-section">
+          <div class="notes-header">
+            <p>Notes</p>
+          </div>
+          <div class="notes-container" id="notesContainer">
+            <div class="notes-group">
+              <div class="label">Add your Title here</div>
+              <input type="text" placeholder="Add your notes here">
+            </div>
+          </div>
+          <div class="notes-btn-wrapper">
+            <a href="javascript:void(0)" onclick="expandNoteToFillScreen()">Expand to fill screen</a>
+          </div>
+        </div>
+    </div>
+        <!-- End of the note section for large screen -->
+    
+        <!-- start of the note section for small screen -->
+        <div class="mobile-note-pad">
+          <div class="note-pad-box">Notepad</div>
+          <div class="note-pad"></div>
+        </div>
+        <!-- end of the note section for small screen -->
+
+
+
+      <!-- Start of the right content -->
+    <div class="right-content r-content">
+      <div class="translate-button">
+        <a href=""><img src="img/g_translate.png" alt="Translate"> TRANSLATE PAGE</a>
+      </div>
+      <div class="calendar-widget">
+        <div id="month-year"></div>
+        <div id="prev-month" onclick="changeMonth(-1)">&lt;</div>
+        <div id="next-month" onclick="changeMonth(1)">&gt;</div>
+        <table id="calendar">
+          <thead>
+            <tr>
+              <th class="sun" style="color: red;">Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- End of calendar widget -->
+    </div>
+    <!-- End of the middle contetnts -->
+
+    <!-- Section for the mobile bottom nav -->
+   <div class="mobile-bottom-nav-bar">
+    <a href="#" class="bar-box">
+      <img src="img/svg/arrow_back.svg" alt="">
+      <div class="nav-text">Back</div>
+    </a>
+    <a href="" class="bar-box">
+      <img src="img/svg/arrow_forward.svg" alt="">
+      <div class="nav-text">Next</div>
+    </a>
+    <a href="" class="bar-box">
+      <img src="img/svg/speaker_phone-mobile.svg" alt="">
+      <div class="nav-text">Read</div>
+    </a>
+    <a href="" class="bar-box">
+      <img src="img/svg/g_translate-mobile.svg" alt="">
+      <div class="nav-text">Translate</div>
+    </a>
+   </div>
+
+    <script src="js/calendar-widget.js"></script>
+    <script src="js/menu-drop-down.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/lms-mobile-menu.js"></script>
+    <script src="js/expand-to-fill.js"></script>
+    <!-- Script for logout -->
+    <script>
+      function confirmLogout() {
+    // Display a confirmation prompt
+    var confirmLogout = window.confirm("Are you sure you want to logout?");
+
+    // Check the user's choice
+    if (confirmLogout) {
+        // If the user clicked OK, perform the logout action
+        alert("Logout successful!");
+        
+        // Redirect to the index page
+        window.location.href = "lms.html"; // Replace "index.html" with your actual index page
+
+    } else {
+        // If the user clicked Cancel, do nothing or handle accordingly
+        alert("Logout canceled.");
+    }
+}
+    </script>
+    
+    <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65b535410ff6374032c5932c/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script>
+    // JavaScript code to toggle the mobile anouncement container
+    const mobileAnnouncement = document.getElementById('mobileAnnouncement');
+  
+    mobileAnnouncement.addEventListener('click', function() {
+      this.classList.toggle('expanded');
+    });
+  </script>
+
+</body>
+</html>

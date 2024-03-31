@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-section,
+.header-section * {
+  box-sizing: border-box;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-section {
+    background-color: #275c6f;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
+}
+
+.header-section .logo {
+  display: flex;
+  flex-direction: row;
+  width: 70px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0 24px 0 0 ;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 50px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family: "Roboto-Regular", sans-serif;
+}
+
+.nav-list a:hover {
+  color: black;
+}
+
+.nav-list .lms-active {
+  color: #ffa76d;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+  .header-section {
+    background-color: #275c6f;
+    padding: 30px 15px;
+    box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-section .logo {
+    width: 127px;
+    height: 35px;
+    margin-left: 15px;
+  }
+
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      z-index: 1000;
+  }
+
+  .nav-list.show {
+      display: flex;
+      width: 50%;
+      padding-top: 40px;
+      z-index: 1000;
+      height: 900px;
+      margin-right: 0;
+      margin-top: 43px;
+  }
+
+  .nav-list li {
+      margin: 0;
+      text-align: left;
+      margin-left: 20px;
+      font-size: 22px;
+      margin: 10px 0 40px 35px;
+      z-index: 1;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+    font-family: "Roboto-Regular", sans-serif;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: 0px;
+  }
+
+  .header-cta-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    margin-left: 40px;
+  }
+
+  .header-cta-container .sign-up2 {
+    color: #ffffff;
+    text-align: right;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #ffa76d;
+    border-width: 1px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* width: 124px; */
+    width: 70px;
+    position: relative;
+  }
+
+  .header-cta-container .log-in2 {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    background:#ffa76d;
+    border-radius: 8px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* width: 124px; */
+    width: 70px;
+    position: relative;
+    margin-left: -18px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header-section {
+    background-color: #275c6f;
+    padding: 30px 15px;
+    box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+  }
+
+  .header-section .logo {
+    width: 127px;
+    height: 35px;
+    margin-left: 30px;
+  }
+
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      z-index: 1000;
+  }
+
+  .nav-list.show {
+      display: flex;
+      width: 30%;
+      padding-top: 40px;
+      z-index: 1000;
+      height: 900px;
+      margin-right: 0;
+      margin-top: 38px;
+  }
+
+  .nav-list li {
+      margin: 0;
+      text-align: left;
+      margin-left: 20px;
+      font-size: 22px;
+      margin: 10px 0 30px 50px;
+      z-index: 1;
+      /* margin-bottom: 30px; */
+  }
+
+  .nav-list a {
+    font-size: 18px;
+    font-family: "Roboto-Regular", sans-serif;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: 0px;
+  }
+
+  .header-cta-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    position: absolute;
+    right: 30px;
+  }
+
+  .sign-up2 {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #ffa76d;
+    border-width: 1px;
+    /* padding: 8px; */
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 124px;
+    position: relative;
+  }
+
+  .log-in2 {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    background:#ffa76d;
+    border-radius: 8px;
+    padding: 12px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 124px;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .header-cta-container {
+    display: none;
+  }
+}
