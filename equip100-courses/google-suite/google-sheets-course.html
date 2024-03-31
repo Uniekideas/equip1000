@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheets - EQUIP1000</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../../css/lms/lms-courses.css">
-    <link rel="stylesheet" href="../../css/lms/courses-for-educators.css">
     <link rel="stylesheet" href="../../css/lms/microsoft-office-tools.css">
     <link rel="stylesheet" href="../../css/lms/dashboard-header.css">
     <link rel="stylesheet" href="../../css/lms/dash-side-bar.css">
-    <link rel="stylesheet" href="../../css/lms/dash-content.css">
     <link rel="stylesheet" href="../../css/eqip/mobile-bottom-nav.css">
 </head>
 <body>
@@ -91,8 +88,7 @@
     <!-- end of the Left side bar -->
 
     <!-- Start of main content -->
-    <!-- Start of main content -->
-    <div class="content mobile-course-content">
+    <div class="courses-content mobile-course-content">
       <div class="main-screen">
       <div class="microsoft-container">
         <div class="microsoft-office-suite-header">
@@ -146,13 +142,9 @@
         </div>
         <a class="save-pdf" href="">Save PDF</a>
         <a class="quiz-link" href="../../assessment/assessment-instructions.html">Take Quiz</a>
-        <br>
       </div>
-    </div>
-    </div>
-    <!-- End of the main contents -->
 
-    <!-- Start of the right content -->
+      <!-- Start of the right content -->
     <div class="right-content right-ms">
       <a class="course-translate-btn" href=""><img src="../../img/g_translate.png" alt="Translate"> TRANSLATE PAGE</a>
       <a class="course-read-btn" href=""><img src="../../img/read.png" alt="Translate"> READ SCREEN</a>
@@ -175,9 +167,26 @@
           <tbody id="calendar-body"></tbody>
         </table>
       </div>
+      <div class="course-list">
+        <a href="" class="lists active">The Word Interface <i class="fa-regular fa-circle-check"></i></a>
+        <a href="" class="lists">Working with Text</a>
+        <a href="" class="lists">Formatting Fundamentals</a>
+        <a href="" class="lists">Advanced Formatting</a>
+        <a href="" class="lists"> Working with Images and Tables</a>
+        <a href="" class="lists">Advanced Techniques</a>
+        <a href="" class="lists">Collaboration and Sharing</a>
+        <a href="" class="lists">Beyond the Basics</a>
+        <a href="" class="lists">Bonus Materials</a>
+        <a href="" class="lists">Real-world Projects</a>
+      </div>
+    </div>
     <!-- End of calendar widget -->
+    </div>
+    </div>
+    <!-- End of the main contents -->
 
-    <!-- Section for the mobile bottom nav -->
+
+   <!-- Section for the mobile bottom nav -->
    <div class="mobile-bottom-nav-bar">
     <a href="#" class="bar-box">
       <img src="../../img/svg/arrow_back.svg" alt="">
@@ -199,10 +208,11 @@
 
 
 
-    <script src="../../js/menu-drop-down.js"></script>
-    <script src="../../js/header.js"></script>
-    <script src="../../js/lms-mobile-menu.js"></script>
-    <script src="../../js/calendar-widget.js"></script>
+
+   <script src="../../js/menu-drop-down.js"></script>
+   <script src="../../js/header.js"></script>
+   <script src="../../js/lms-mobile-menu.js"></script>
+   <script src="../../js/calendar-widget.js"></script>
     <!-- Script for logout -->
     <script>
       function confirmLogout() {
