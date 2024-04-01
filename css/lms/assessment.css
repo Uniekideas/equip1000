@@ -148,6 +148,68 @@
     background-color: #3d6b7b;
   }
 
+  .assessment-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #a7b7bc;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .assessment-selection .assessment-box {
+    width: 100%;
+  }
+
+  .assessment-selection .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .row p {
+    color: #275c6f;
+      text-align: left;
+      font-family: "Roboto-Bold", sans-serif;
+      font-size: 23px;
+      line-height: 120%;
+      font-weight: 700;
+      position: relative;
+      /* width: 100%; */
+  }
+
+  /* .row .title {
+    width: 100%;
+  } */
+
+  .row .status {
+    text-align: left;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+    position: relative;
+    /* width: 100%; */
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .row a {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+  }
+
   @media only screen and (max-width: 767px) {
     .assessment-container {
         display: block;
@@ -313,6 +375,53 @@
     .assessment-container a {
         font-size: 13px;
         word-wrap: break-word;
+    }
+
+    .assessment-selection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #a7b7bc;
+      margin: -40px auto 0 auto;
+      width: 100%;
+      border-radius: 12px;
+    }
+  
+    .assessment-selection .assessment-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .assessment-selection .row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+    }
+  
+    .row p {
+      color: #275c6f;
+        text-align: left;
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: 23px;
+        line-height: 120%;
+        font-weight: 700;
+        position: relative;
+        width: 100%;
+    }
+  
+    .row a {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
     }
   }
 
