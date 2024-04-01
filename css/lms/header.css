@@ -75,13 +75,14 @@ body {
 @media (max-width: 768px) {
   .header-section {
     background-color: #275c6f;
-    padding: 30px 15px;
+    /* padding: 30px 15px; */
     box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    z-index: 1000;
   }
 
   .header-section .logo {
@@ -108,7 +109,7 @@ body {
       z-index: 1000;
       height: 900px;
       margin-right: 0;
-      margin-top: 43px;
+      margin-top: 10px;
   }
 
   .nav-list li {
