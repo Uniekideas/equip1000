@@ -175,7 +175,7 @@
 
 @media only screen and (max-width: 767px) {
     .content .lms-categories-container {
-        margin-top: -260px;
+        margin-top: -270px;
     }
     
     .categories-container .courses-for-educators-header {
@@ -187,7 +187,7 @@
     }
 
     .categories-container .courses-for-educators-description {
-        margin-top: -50px;
+        margin-top: -70px;
         display: block;
         width: 95%;
         margin-left: auto;
