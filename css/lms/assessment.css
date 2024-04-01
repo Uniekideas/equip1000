@@ -157,21 +157,32 @@
     margin: 0 auto;
     width: 100%;
     border-radius: 12px;
+    height: fit-content;
+
   }
 
   .assessment-selection .assessment-box {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+
+
   }
 
   .assessment-selection .row {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
+    height: 60px;
+    /* border: 1px solid black; */
   }
 
-  .row p {
+  .row .title {
     color: #275c6f;
       text-align: left;
       font-family: "Roboto-Bold", sans-serif;
@@ -179,12 +190,41 @@
       line-height: 120%;
       font-weight: 700;
       position: relative;
-      /* width: 100%; */
+      width: 40%;      
   }
 
-  /* .row .title {
-    width: 100%;
-  } */
+  .row .top-title {
+    color: #275c6f;
+      text-align: left;
+      font-family: "Roboto-Bold", sans-serif;
+      font-size: 23px;
+      line-height: 120%;
+      font-weight: 700;
+      position: relative;
+      width: 40%;      
+  }
+
+  .row .top-status {
+    color: #275c6f;
+      text-align: left;
+      font-family: "Roboto-Bold", sans-serif;
+      font-size: 23px;
+      line-height: 120%;
+      font-weight: 700;
+      position: relative;
+      width: 25%;      
+  }
+
+  .row .top-action {
+    color: #275c6f;
+      text-align: left;
+      font-family: "Roboto-Bold", sans-serif;
+      font-size: 23px;
+      line-height: 120%;
+      font-weight: 700;
+      position: relative;
+      width: 20%;      
+  }
 
   .row .status {
     text-align: left;
@@ -193,21 +233,22 @@
     line-height: 120%;
     font-weight: 500;
     position: relative;
-    /* width: 100%; */
     color: black;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    width: 25%;
+
   }
 
   .row a {
-    /* width: 50%; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 36px;
+    width: 20%;
   }
 
   @media only screen and (max-width: 767px) {
@@ -287,6 +328,10 @@
         font-weight: 400;
         position: relative;
         align-self: stretch;
+    }
+
+    .assessment-body .pick-first {
+      margin-bottom: 45px;
     }
 
     .assessment-body ul {
@@ -380,12 +425,15 @@
     .assessment-selection {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       border: 1px solid #a7b7bc;
-      margin: -40px auto 0 auto;
+      margin: -30px auto 0 auto;
       width: 100%;
       border-radius: 12px;
+      height: 100%;
+      overflow-y: scroll;
+      position: relative;
     }
   
     .assessment-selection .assessment-box {
@@ -393,7 +441,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      height: fit-content;
+  
     }
   
     .assessment-selection .row {
@@ -401,27 +451,82 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: 95%;
+      width: 90%;
+      height: 120px;
+      /* border: 1px solid black; */
+      padding: 0;
+      margin-top: -40px;
     }
   
-    .row p {
+    .row .title {
       color: #275c6f;
         text-align: left;
         font-family: "Roboto-Bold", sans-serif;
-        font-size: 23px;
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 500;
+        position: relative;
+        width: 40%;      
+    }
+  
+    .row .top-title {
+      color: #275c6f;
+        text-align: left;
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: 17px;
         line-height: 120%;
         font-weight: 700;
         position: relative;
-        width: 100%;
+        width: 40%;      
+    }
+  
+    .row .top-status {
+      color: #275c6f;
+        text-align: left;
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: 17px;
+        line-height: 120%;
+        font-weight: 700;
+        position: relative;
+        width: 25%;      
+    }
+  
+    .row .top-action {
+      color: #275c6f;
+        text-align: left;
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: 17px;
+        line-height: 120%;
+        font-weight: 700;
+        position: relative;
+        width: 20%;      
+    }
+  
+    .row .status {
+      text-align: left;
+      font-family: "Roboto-Bold", sans-serif;
+      font-size: 16px;
+      line-height: 120%;
+      font-weight: 400;
+      position: relative;
+      color: black;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 25%;
+  
     }
   
     .row a {
-      width: 50%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       height: 36px;
+      width: 20%;
+      font-size: 16px;
+      font-weight: 400;
     }
   }
 
@@ -502,6 +607,10 @@
         font-weight: 400;
         position: relative;
         align-self: stretch;
+    }
+
+    .assessment-body .pick-first {
+      margin-bottom: 45px;
     }
 
     .assessment-body ul {
