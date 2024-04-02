@@ -30,13 +30,17 @@
     justify-content: center;
   }
 
-  .new-message-tablink.active {
+  /* .new-message-tablink.active {
     background-color: #ffa76d;
   }
 
   .inbox-tablink.active {
     background-color: #ffa76d;
-  }
+  } */
+
+  .inbox-tablink.active, .new-message-tablink.active {
+    background-color: #ffa76d;
+}
   
   .inbox-tablink {
     border: none;
@@ -44,7 +48,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     width: 50%;
-    /* background: #ffa76d; */
+    background: #ffa76d;
     border-style: solid;
     border-color: #cce6ff;
     border-width: 1px;
