@@ -1615,3 +1615,9 @@ width: 354px;
   font-size: 20px;
 }
 }
+
+@media only screen and (min-width: 1025px) {
+  .mobile-cta {
+      display: none;
+  }
+}
