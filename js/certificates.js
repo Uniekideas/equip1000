@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const previewDownloadLink = document.querySelector('.preview-pane .cert-download-wrapper a');
 
     certificates.forEach((certificate, index) => {
-        const downloadButton = certificate.querySelector('a');
+        const downloadButton = certificate.querySelector('img');
 
         downloadButton.addEventListener('click', function(event) {
             // Prevent the default action of the download link

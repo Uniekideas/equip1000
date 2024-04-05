@@ -1,4 +1,8 @@
 /* The Modal (background) */
+body {
+  font-family: "Roboto-Bold", sans-serif;
+}
+
 .modal {
     display: none;
     position: fixed;
