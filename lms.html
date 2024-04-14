@@ -84,7 +84,8 @@
         <img class="close-btn" onclick="closePopupAndOverlay()" src="img/svg/Cancel.svg" alt="">
         <div class="form-element">
           <h2>Login</h2>
-            <form action="lms-dashboard.html">
+          <p id="loginMessage"></p>
+            <form id="loginForm" action="#">
               <div class="email">
                 <img src="img/svg/email.svg" alt="">
                 <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required>
@@ -100,7 +101,7 @@
               <div class="forget-container">
                 <a class="forgot-password" href="">Forgot Password</a>
               </div>
-              <button class="submit-container" onclick="saveLoginInfo()">
+              <button class="submit-container" onclick="validateloginPassword()">
                 <p class="login">Login</p>
               </button>
               <div class="bottom-account">
@@ -114,7 +115,8 @@
         <img class="close-btn" onclick="closePopupAndOverlay()" src="img/svg/Cancel.svg" alt="">
         <div class="form-element">
           <h2>Registration</h2>
-            <form action="lms-dashboard.html">
+          <p id="signupMessage"></p>
+            <form id="signupForm" action="#">
               <div class="name">
                 <img src="img/svg/person.svg" alt="">
                 <input type="text" id="regFirstName" name="regFirstName" placeholder="Name" required>
@@ -131,7 +133,7 @@
                 <input type="checkbox" required>
                 <div class="remember-me">I agree to the terms &amp; conditions</div>
               </div>
-              <button class="submit-container" onclick="validateRegistration()">
+              <button class="submit-container" onclick="validatesignupPassword()">
                 <p class="login">Sign Up</p>
               </button>
               <div class="bottom-account">
@@ -234,6 +236,8 @@
       <script src="js/header.js"></script>
       <script src="js/read-more.js"></script>
       <script src="js/login-pup-up.js"></script>
+      <script src="js/validate-password.js"></script>
+      <script src="js/password-redirection.js"></script>
       <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

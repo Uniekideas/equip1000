@@ -79,7 +79,7 @@
             <p class="sub-title">We need these details on your financial earnings to see if you are good fit for the laptop</p>
 
             <div class="product-options">
-                <form action="laptop-checkout.html">
+                <form id="laptopConfirmation" action="#">
                     <div class="income">
                         <p>Monthly Income</p>
                           <div class="selection">
@@ -101,44 +101,12 @@
                         </div>
                     </div>
                     <div class="col button-container">
-                        <button id="" class="product-btn waves-effect waves-light">Apply Now</button>
+                        <button type="submit" id="" class="product-btn waves-effect waves-light">Apply Now</button>
                     </div>
-                    <!-- <button class="col button-container">
-                      <p id="" class="product-btn">Apply Now</p>
-                    </button> -->
                 </form>             
             </div>
         </div>
     </div>
-
-    <!-- Start of the checkout pop up -->
-    <!-- <div class="login-popup">
-        <form action="">
-            <div onclick="showConfirmation()" class="order-confirmation">
-                <div class="cancel-btn"></div>
-                <div class="title">
-                <p class="title-text">Purchase confirmation</p>
-                <div class="divider"></div>
-                <img class="close-icon" src="../img/x-mark-transparent-24.png" alt="close">
-                <p class="confirm-text">Your Laptop will be delivered to you</p>
-                <img class="confirm" src="../img/payment confirm.png" alt="confirm">
-                </div>
-                <div class="product-info">
-                    <p class="amount-label">Amount paid</p>
-                    <p class="amount">NGN 300,000.00</p>
-                    <p class="amount-in-word">Three Hundred and Fifteen Thousand Naira Only</p>
-                    <p class="product-paid-for">Product paid for:</p>
-                    <p class="laptop">Laptop</p>
-                </div>
-                <div class="payment">
-                    <div class="payment-due-date">Payment due date:</div>
-                    <div class="payment-date">22nd Dec, 2024</div>
-                </div>
-                <a class="go-to-dashboard" href="dashboard.html">Go to Dashboard</a>
-            </div>
-        </form>
-    </div> -->
-    <!-- End of Checkout popup -->
 
     <!-- Section for the mobile bottom nav -->
    <div class="mobile-bottom-nav-bar">
@@ -167,6 +135,16 @@
     <script src="../js/logout.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <script>
+      // JS redirection code for Laptop confirmation form
+      document.getElementById("laptopConfirmation").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+          // Redirect to the next page
+          window.location.href = "laptop-checkout.html";
+          });
+    </script>
+    
     <script>
         $(document).ready(function () {
     'user strict';
