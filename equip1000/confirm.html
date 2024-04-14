@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/eqip/mobile-bottom-nav.css">
     <link rel="stylesheet" href="../css/eqip/reserve/register.css">
     <link rel="stylesheet" href="../css/eqip/reserve/confirm.css">
+    <link rel="stylesheet" href="../css/eqip/refer.css">
 </head>
 <body>
     <div class="sticky">
@@ -41,10 +42,30 @@
                 <img src="../img/refer-icon.png" alt="">
                 <p class="refer-text">Refer your friends</p>
                 <p class="refer-subtext">Refer your friends and families who are educators to be part of this empowerement train and get some incentives</p>
-                <a class="refer-btn" href="">Refer Now</a>
-                
+                <a class="refer-btn" id="referBnt" href="javascript:void(0)">Refer Now</a>  
             </div>
         </div>
+
+        <!-- Pop up for refer a friend -->
+        <div id="referModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 class="refer-title">Refer a Friend</h1>
+                <div id="referForm">
+                    <label for="referrerEmail">Your Email:</label>
+                    <input type="email" id="referrerEmail" required><br>
+                    <label for="referredEmail">Friend's Email:</label>
+                    <input type="email" id="referredEmail" required><br>
+                    <div class="refer-btn-wrapper">
+                        <button onclick="referFriend()">Refer</button>
+                    </div>
+                </div>
+                <div id="result"></div>
+                <div id="error"></div>
+                <div id="warning"></div>
+            </div>
+        </div>
+        <!-- End of pop up for refer a friend -->
 
         <!-- Right side -->
         <div class="right-side confirm-mobile">
@@ -93,6 +114,7 @@
 
 
     <script src="../js/header.js"></script>
+    <script src="../js/refer.js"></script>
     <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
