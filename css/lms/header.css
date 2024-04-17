@@ -35,6 +35,8 @@ body {
 .nav-list {
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 24px 0 0 ;
     padding: 0;
 }
@@ -44,10 +46,17 @@ body {
 }
 
 .nav-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
+    color:#ffffff;
+    text-align: center;
     font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .nav-list a:hover {
@@ -57,6 +66,36 @@ body {
 .nav-list .lms-active {
   color: #ffa76d;
 }
+
+.nav-list li select {
+  background:#ffffff;
+  border-radius: 8px;
+  height: 40px;
+  width: 104px;
+  padding: 0px 16px 0px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+li select option {
+  color:#495057;
+  text-align: left;
+  font-family:"Roboto-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 
 .menu-toggle {
     display: none;
@@ -72,7 +111,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header-section {
     background-color: #275c6f;
     /* padding: 30px 15px; */
@@ -94,12 +133,16 @@ body {
   .nav-list {
       display: none;
       flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
       width: 100%;
       position: absolute;
       top: 60px;
       left: 0;
-      background-color: #333;
+      background-color: #275c6f;
       z-index: 1000;
+      padding-left: 40px;
+
   }
 
   .nav-list.show {
@@ -107,19 +150,28 @@ body {
       width: 50%;
       padding-top: 40px;
       z-index: 1000;
-      height: 900px;
+      /* height: 900px; */
+      height: 450px;
       margin-right: 0;
       margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
   }
 
   .nav-list li {
-      margin: 0;
+      /* margin: 0; */
       text-align: left;
-      margin-left: 20px;
+      /* margin-left: 20px; */
       font-size: 22px;
-      margin: 10px 0 40px 35px;
+      margin: 0px 0 50px 0px;
       z-index: 1;
   }
+
+  .nav-list .read-screen {
+    display: none;
+}
 
   .nav-list a {
     font-size: 18px;
@@ -241,6 +293,10 @@ body {
       z-index: 1;
       /* margin-bottom: 30px; */
   }
+
+  .nav-list .read-screen {
+    display: none;
+}
 
   .nav-list a {
     font-size: 18px;
