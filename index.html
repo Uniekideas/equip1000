@@ -12,6 +12,7 @@
     <!-- <link rel="stylesheet" href="css/eqip/reserve/dash-header.css"> -->
 </head>
 <body>
+  <div id="content">
 
   <!-- Start of large screen navbar -->
   <div class="sticky">
@@ -27,12 +28,12 @@
             <li><img src="img/svg/mobile-menu-list.svg" alt=""><a href="lms.html">LMS</a></li>
             <li class="mobile-hide"><a href="#">About Us</a></li>
             <li><img src="img/svg/mobile-menu-contact.svg" alt=""><a href="#">Contact Us</a></li>
-            <li class="read-screen"><a href="#">Read Screen</a></li>
+            <li class="read-screen"><a href="#" id="generateSpeechButton">Read Screen</a></li>
             <li>
-              <select name="" id="">
-                <option value="English">English</option>
-                <option value="French">French</option>
-                <option value="Spanish">Spanish</option>
+              <select name="" id="languageSelect" onchange="translatePage()">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
               </select>
             </li>
             <li class="mobile-cta"><a href="equip1000/register.html">Sign Up</a></li>
@@ -44,6 +45,7 @@
         </div>
     </div>
   </div>
+  <!-- <div id="translatedContent"></div> -->
   <!-- Start of large screen navbar -->
 
     <!-- Start of hero section for large screen -->
@@ -98,7 +100,7 @@
             <img class="features-section-image" src="img/course.png" alt="">
             <p class="features-title">Courses</p>
             <p class="feature-sub-title">Dive into a range of professional development courses at your own pace, we provide a wide range of courses to help in your professional development</p>
-            <a class="features-btn" href="">Enroll Now</a>
+            <a class="features-btn" href="lms.html">Enroll Now</a>
           </div>
           
         </div>
@@ -107,7 +109,7 @@
             <img class="features-section-image" src="img/course.png" alt="">
             <p class="features-title">Loan programs</p>
             <p class="feature-sub-title">Get access to Laptops and MI-fi to enhance your digital capability even with no money. We provide you with these devices and you can pay later.</p>
-            <a class="features-btn" href="">Apply now</a>
+            <a class="features-btn" href="equip1000/register.html">Apply now</a>
           </div>
         </div>
         <div class="features-single">
@@ -115,7 +117,7 @@
             <img class="features-section-image" src="img/course.png" alt="">
             <p class="features-title">Community</p>
             <p class="feature-sub-title">Connect with fellow Educators, and grow together. We provide a platform where our Educators get to connect with like minded Individuals.</p>
-            <a class="features-btn" href="">Join now</a>
+            <a class="features-btn" href="lms.html">Join now</a>
           </div>
         </div>
       </div>     
@@ -133,7 +135,7 @@
         <p class="title">Discover Tailored Professional development</p>
         <p class="sub-title">Immerse yourself in a curated selection of courses crafted to meet the evolving needs of modern educators. From Innovating teaching methodologies to cutting-edge technology Integration, Our courses will help elevate you and serve as your gateway to staying ahead in
           your field</p>
-          <a class="btn" href="">Enroll now</a>
+          <a class="btn" href="lms.html">Enroll now</a>
       </div>
     </div>
 
@@ -141,7 +143,7 @@
       <div class="discover-details">
         <p class="title">Unlock possibilities with our loan program</p>
         <p class="sub-title">Access to technology should never be a barrier. That’s why we offer an exclusive laptop and mifi loan program. Apply today to receive the tools you need to create engaging lessons and connect with your students anytime, anywhere.</p>
-          <a class="btn up" href="">Apply now</a>
+          <a class="btn up" href="equip1000/register.html">Apply now</a>
       </div>
       <div class="value-image value-up">
         <img src="img/unlock image.png" alt="Discover Image">
@@ -155,7 +157,7 @@
       <div class="discover-details up">
         <p class="title">Connect and Collaborate with Like-Minded Educators</p>
         <p class="sub-title">IJoin a thriving community of Educators who shares your passion. Engage in meaningful conversations, share Insights and collaborate to learn how to Improve teaching experience. Together, we can shape the future of education and Inspire the next generation</p>
-          <a class="btn" href="">Join now</a>
+          <a class="btn" href="lms.html">Join now</a>
       </div>
     </div>
   </div>
@@ -166,7 +168,7 @@
     <div class="cta-contents">
       <p class="title">Your Growth, Your Way</p>
       <p class="sub-title"><span>EQUIP1000</span> is more than just a project; It’s a dynamic ecosystem tailored to your professional Journey. Take control of your growth, embrace new opportunities and become the educator you aspire to be. Ready to embark on a transformative experience? Join <span>EQUIP1000</span> train today and be part of a community that believes in the power of empowered educators.</p>
-      <a class="btn" href="">Get started</a>
+      <a class="btn" href="lms.html">Get started</a>
     </div>
   </div>
    <!-- Start of Call to Action -->
@@ -325,10 +327,16 @@
       <div class="nav-text">Translate</div>
     </a>
    </div>
+
+
+  </div>
    
 
     <script src="js/header.js"></script>
     <script src="js/accordion.js"></script>
+    <!-- <script src="js/api/page-translation.js"></script> -->
+    <!-- <script src="js/api/test.js"></script> -->
+    <script src="js/api/read-screen.js"></script>
 
     <!--Start of Tawk.to Script-->
   <script type="text/javascript">

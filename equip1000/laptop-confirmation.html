@@ -107,7 +107,10 @@
                         </div>
                     </div>
                     <div class="col button-container">
-                        <button type="submit" id="" class="product-btn waves-effect waves-light">Apply Now</button>
+                        <button type="submit" class="product-btn waves-effect waves-light">Apply Now</button>
+                    </div>
+                    <div class="error-msg">
+                      <p id="errorMsg"></p>
                     </div>
                 </form>             
             </div>
@@ -144,11 +147,25 @@
     
     <script>
       // JS redirection code for Laptop confirmation form
-      document.getElementById("laptopConfirmation").addEventListener("submit", function(event) {
-          event.preventDefault(); // Prevent the form from submitting normally
-          // Redirect to the next page
-          window.location.href = "laptop-checkout.html";
-          });
+    document.getElementById("laptopConfirmation").addEventListener("submit", function(event) {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Check if all required fields have been filled out
+        var monthlyIncome = document.getElementById("monthlyIncome").value;
+        var paymentOption = document.getElementById("paymentOption").value;
+
+        // Check if the selected options are not the default "Select" value
+        if (monthlyIncome !== "select" && paymentOption !== "select") {
+            // Redirect to the next page if all required fields are filled out
+            window.location.href = "laptop-checkout.html";
+        } else {
+            // If any required field is not filled out, display an error message or handle it as needed
+            // alert("Please select monthly and payment options.");
+            document.getElementById("errorMsg").innerHTML = "Please select monthly income and payment installment options.";
+        }
+    });
+
     </script>
     
     <script>

@@ -81,7 +81,7 @@
         </div>
         
         <div class="product-details">
-            <form action="">
+            <form id="cardDetails" action="">
                 <p class="title">Bank Card</p>
                 <p class="sub-title">Please select pickup method</p>
                 <div class="top-card-details">
@@ -104,7 +104,7 @@
                             </div>
                             <div class="row">
                                 <img src="../img/svg/card.svg" alt="">
-                                <input type="text" required>
+                                <input id="cardNumber" type="text" required>
                                 <img src="../img/svg/lock.svg" alt="">
                             </div>
                         </div>
@@ -125,14 +125,14 @@
                             </div>
                             <div class="row">
                                 <img src="../img/svg/card.svg" alt="">
-                                <input id="validMonth" type="text" placeholder="123" required>
+                                <input id="cvvNumber" type="text" placeholder="123" required>
                             </div>
                         </div>
                     </div>
                     </div>
                 </div>
                 <div class="remember">
-                    <input type="radio">
+                    <input id="remember" type="radio">
                     <p>Remember this card</p>
                 </div>
                 <div class="choose-payment-method">
@@ -146,13 +146,13 @@
                 </div>
 
                 <div class="agreement">
-                    <input type="radio" required>
+                    <input id="agreement" type="radio" required>
                     <p>I agree to the <span><a href=""> terms and conditions</a></span></p>
                 </div>
-                <!-- <button id="login" class="confirm-btn">PAY N305,000</button> -->
-                <a id="login"  href="card-details.html" class="confirm-btn">
+                <button id="login" class="confirm-btn">PAY N305,000</button>
+                <!-- <a id="login"  href="card-details.html" class="confirm-btn">
                     <p class="confirm-order">PAY N305,000</p>
-                </a>
+                </a> -->
             </form>
         </div>
     </div>
@@ -205,6 +205,32 @@
     <script src="../js/logout.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <script>
+        document.getElementById("cardDetails").addEventListener("submit", function(event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+    
+            // Check if all input fields and dropdowns have been filled or selected
+            var cardNumber = document.getElementById("cardNumber").value;
+            var validMonth = document.getElementById("validMonth").value;
+            var cvvNumber = document.getElementById("cvvNumber").value;
+            var paymentMethod = document.querySelector(".choose-payment-method select").value;
+            var agreementChecked = document.getElementById("agreement").checked;
+    
+            // Check if all required fields are filled or selected
+            if (cardNumber && validMonth && cvvNumber && paymentMethod !== "Choose-payment-method" && agreementChecked) {
+                // If all fields are filled or selected, submit the form
+                this.submit();
+            } else {
+                // If any required field is empty or not selected, display an error message or handle it as needed
+                alert("Please fill out all fields and select a payment method.");
+                // You can also add specific error handling for each field if needed
+            }
+        });
+    </script>
+    
+    
     <script>
         $(document).ready(function () {
     'user strict';

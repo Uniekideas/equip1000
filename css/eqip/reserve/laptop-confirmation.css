@@ -231,6 +231,41 @@
     cursor: pointer;
 }
 
+.error-msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+#errorMsg {
+    color: red;
+    font-family: "Roboto-Medium", sans-serif;
+    font-weight: 500;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(3px); }
+}
+
+/* CSS animation definition */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(3px); }
+}
+
+/* Apply animation to the element */
+#errorMsg {
+    animation: shake 1.5s ease-in-out infinite; /* Adjust duration and timing function as needed */
+}
+
 @media only screen and (max-width: 767px) {
     .content {
         display: flex;

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/eqip/search.css">
     <link rel="stylesheet" href="../css/eqip/mobile-bottom-nav.css">
     <link rel="stylesheet" href="../css/eqip/reserve/dash-header.css">
+    <link rel="stylesheet" href="../css/eqip/filter.css">
 
 </head>
 <body>
@@ -81,13 +82,30 @@
                 <div class="top">
                     <div class="search">
                         <input type="search" id="searchInput" placeholder="Search for a laptop">
-                        <div class="filter"></div>
+                        <img id="showFilter" src="../img/svg/filter.svg" alt="">
                     </div>
+                    
                 </div>
                 <div class="back-to-mifi">
                     <a href="choose-mifi.html">Apply for a Mi-fi</a>
                     <div class="underline"></div>
                 </div>
+
+                <div class="fiter-container" id="filterContainer" style="display: none;">
+                    <select id="filterBrand">
+                      <option value="">Select Brand</option>
+                      <option value="HP">HP</option>
+                      <option value="Dell">Dell</option>
+                      <!-- Add other brands as needed -->
+                    </select>
+                    <select id="filterPrice">
+                      <option value="">Select Price Range</option>
+                      <option value="0-300000">Below ₦300,000</option>
+                      <option value="300001-500000">₦300,000 - ₦500,000</option>
+                      <!-- Add other price ranges as needed -->
+                    </select>
+                </div>
+
                 <div class="bottom">
                     <ul id="itemList">
                         <li class="hidden"><a href="choose-laptop.html"><img src="../img/hp-pavilion-laptop.png" alt=""> HP Laptop</a></li>
@@ -98,8 +116,9 @@
                     <p class="title">Choose a Laptop</p>
                     <p class="sub-title">Choose one of the available laptops that’s also within your range of Income</p>
                 </div>
+
                 <div class="laptop-product">
-                    <div class="laptop">
+                    <div class="laptop" data-brand="Dell" data-price="300001">
                         <a class="cta" href="laptop-confirmation.html">Apply Now</a>
                         <img src="../img/dell-xps-13-screen-lid1 1.png" alt="">
                         <div class="item-description">
@@ -107,7 +126,7 @@
                             <p class="price">₦300,000</p>
                         </div>
                     </div>
-                    <div class="laptop">
+                    <div class="laptop" data-brand="Dell" data-price="300001">
                         <a class="cta" href="laptop-confirmation.html">Apply Now</a>
                         <img src="../img/dell-xps-13-screen-lid1 1.png" alt="">
                         <div class="item-description">
@@ -117,7 +136,7 @@
                     </div>
                 </div>
                 <div class="laptop-product">
-                    <div class="laptop">
+                    <div class="laptop" data-brand="Dell" data-price="300001">
                         <a class="cta" href="laptop-confirmation.html">Apply Now</a>
                         <img src="../img/dell-xps-13-screen-lid1 1.png" alt="">
                         <div class="item-description">
@@ -125,7 +144,7 @@
                             <p class="price">₦300,000</p>
                         </div>
                     </div>
-                    <div class="laptop">
+                    <div class="laptop" data-brand="Dell" data-price="300001">
                         <a class="cta" href="laptop-confirmation.html">Apply Now</a>
                         <img src="../img/dell-xps-13-screen-lid1 1.png" alt="">
                         <div class="item-description">
@@ -167,6 +186,7 @@
     <script src="../js/search.js"></script>
     <script src="../js/menu-drop-down.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/filter.js"></script>
     <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

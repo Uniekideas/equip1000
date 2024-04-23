@@ -96,11 +96,11 @@
             <form id="loginForm" action="#">
               <div class="email">
                 <img src="img/svg/email.svg" alt="">
-                <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required>
+                <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" autocomplete="email" required>
               </div>
               <div class="password">
                 <img src="img/svg/register-lock.svg" alt="">
-                <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" autocomplete="current-password" required>
               </div>
               <div class="check-container">
                 <input type="checkbox" required>
@@ -246,6 +246,7 @@
       <script src="js/login-pup-up.js"></script>
       <script src="js/validate-password.js"></script>
       <script src="js/password-redirection.js"></script>
+      <!-- <script src="js/api/user-outh.js"></script> -->
       <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
